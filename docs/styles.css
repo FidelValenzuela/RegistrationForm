@@ -1,84 +1,119 @@
-/*styles.css file for RegistrationForm Project*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    background-color: #1b1b32;
-    color: #f5f6f7;
-    font-family: Tahoma;
-    font-size: 16px;
-  }
-  
-  h1, p {
-    margin: 1em auto;
-    text-align: center;
-  }
-  
-  form {
-    width: 60vw;
-    max-width: 500px;
-    min-width: 300px;
-    margin: 0 auto;
-    padding-bottom: 2em;
-  }
-  
-  fieldset {
-    border: none;
-    padding: 2rem 0;
-    border-bottom: 3px solid #3b3b4f;
-  }
-  
-  fieldset:last-of-type {
-    border-bottom: none;
-  }
-  
-  label {
-    display: block;
-    margin: 0.5rem 0;
-  }
-  
-  input,
-  textarea,
-  select {
-    margin: 10px 0 0 0;
-    width: 100%;
-    min-height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #1e1e2f;
+  color: #f0f0f0;
 }
-  
-  input, textarea {
-    background-color: #0a0a23;
-    border: 1px solid #0a0a23;
-    color: #ffffff;
-  }
-  
-  .inline {
-    width: unset;
-    margin: 0 0.5em 0 0;
-    vertical-align: middle;
-  }
-  
-  input[type="submit"] {
-    display: block;
-    width: 60%;
-    margin: 1em auto;
-    height: 2em;
-    font-size: 1.1rem;
-    background-color: #3b3b4f;
-    border-color: white;
-    min-width: 300px;
-  }
-  
-  input[type="file"] {
-    padding: 1px 2px;
-  }
-  
-  .inline{
-    display: inline; 
-  }
-  
-  a{
-    color: #dfdfe2;
-  }
-  
 
+.container {
+  width: 90%;
+  max-width: 500px;
+  background-color: #2c2c3b;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+legend {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #1f1f2e;
+  color: #f0f0f0;
+  font-size: 1rem;
+}
+
+input[type="file"] {
+  padding: 0.4rem;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.checkbox a {
+  color: #f0f0f0;
+  text-decoration: underline;
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #5a5a7a;
+  color: #f0f0f0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7373a2;
+}
