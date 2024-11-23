@@ -1,62 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Form</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="container">
-      <h1>Register</h1>
-      <p>Please fill out this form to create an account</p>
-      <form method="post" action="https://register-demo.freecodecamp.org">
-        <fieldset>
-          <label for="first-name">First Name</label>
-          <input id="first-name" name="first-name" type="text" required />
-
-          <label for="last-name">Last Name</label>
-          <input id="last-name" name="last-name" type="text" required />
-
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required />
-
-          <label for="new-password">Password</label>
-          <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required />
+  <body class="bg-gray-900 text-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md p-6 bg-gray-800 rounded-lg shadow-lg">
+      <h1 class="text-2xl font-semibold text-center mb-4">Register</h1>
+      <p class="text-center text-sm text-gray-400 mb-6">
+        Please fill out this form to create an account
+      </p>
+      <form
+        method="post"
+        action="https://register-demo.freecodecamp.org"
+        class="space-y-6"
+      >
+        <fieldset class="space-y-4">
+          <div>
+            <label for="first-name" class="block text-sm font-medium">First Name</label>
+            <input
+              id="first-name"
+              name="first-name"
+              type="text"
+              required
+              class="w-full p-3 rounded-md border border-gray-700 bg-gray-900 text-gray-100"
+            />
+          </div>
+          <div>
+            <label for="last-name" class="block text-sm font-medium">Last Name</label>
+            <input
+              id="last-name"
+              name="last-name"
+              type="text"
+              required
+              class="w-full p-3 rounded-md border border-gray-700 bg-gray-900 text-gray-100"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              class="w-full p-3 rounded-md border border-gray-700 bg-gray-900 text-gray-100"
+            />
+          </div>
+          <div>
+            <label for="new-password" class="block text-sm font-medium">Password</label>
+            <input
+              id="new-password"
+              name="new-password"
+              type="password"
+              pattern="[a-z0-5]{8,}"
+              required
+              class="w-full p-3 rounded-md border border-gray-700 bg-gray-900 text-gray-100"
+            />
+          </div>
         </fieldset>
 
-        <fieldset class="radio-group">
-          <legend>Account Type</legend>
-          <label><input type="radio" name="account-type" value="personal" checked /> Personal</label>
-          <label><input type="radio" name="account-type" value="business" /> Business</label>
+        <fieldset class="space-y-2">
+          <legend class="text-sm font-medium mb-2">Account Type</legend>
+          <div class="flex items-center gap-4">
+            <label class="flex items-center">
+              <input
+                type="radio"
+                name="account-type"
+                value="personal"
+                checked
+                class="text-indigo-600 focus:ring-indigo-500"
+              />
+              <span class="ml-2">Personal</span>
+            </label>
+            <label class="flex items-center">
+              <input
+                type="radio"
+                name="account-type"
+                value="business"
+                class="text-indigo-600 focus:ring-indigo-500"
+              />
+              <span class="ml-2">Business</span>
+            </label>
+          </div>
         </fieldset>
 
-        <fieldset>
-          <label for="profile-picture">Profile Picture</label>
-          <input id="profile-picture" type="file" name="file" />
-
-          <label for="age">Age</label>
-          <input id="age" type="number" name="age" min="13" max="120" />
-
-          <label for="referrer">How did you hear about us?</label>
-          <select id="referrer" name="referrer">
-            <option value="">Select one</option>
-            <option value="1">freeCodeCamp News</option>
-            <option value="2">freeCodeCamp YouTube</option>
-            <option value="3">freeCodeCamp Forum</option>
-            <option value="4">Other</option>
-          </select>
-
-          <label for="bio">Bio</label>
-          <textarea id="bio" name="bio" rows="3" placeholder="I like coding on the beach..."></textarea>
+        <fieldset class="space-y-4">
+          <div>
+            <label for="profile-picture" class="block text-sm font-medium">Profile Picture</label>
+            <input
+              id="profile-picture"
+              type="file"
+              name="file"
+              class="block w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-indigo-700 file:text-white hover:file:bg-indigo-800"
+            />
+          </div>
+          <div>
+            <label for="age" class="block text-sm font-medium">Age</label>
+            <input
+              id="age"
+              type="number"
+              name="age"
+              min="13"
+              max="120"
+              class="w-full p-3 rounded-md border border-gray-700 bg-gray-900 text-gray-100"
+            />
+          </div>
+          <div>
+            <label for="referrer" class="block text-sm font-medium">How did you hear about us?</label>
+            <select
+              id="referrer"
+              name="referrer"
+              class="w-full p-3 rounded-md border border-gray-700 bg-gray-900 text-gray-100"
+            >
+              <option value="">Select one</option>
+              <option value="1">freeCodeCamp News</option>
+              <option value="2">freeCodeCamp YouTube</option>
+              <option value="3">freeCodeCamp Forum</option>
+              <option value="4">Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="bio" class="block text-sm font-medium">Bio</label>
+            <textarea
+              id="bio"
+              name="bio"
+              rows="3"
+              placeholder="I like coding on the beach..."
+              class="w-full p-3 rounded-md border border-gray-700 bg-gray-900 text-gray-100"
+            ></textarea>
+          </div>
         </fieldset>
 
-        <label class="checkbox">
-          <input type="checkbox" required name="terms-and-conditions" />I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/" target="_blank">terms and conditions</a>
-        </label>
+        <div class="flex items-start">
+          <input
+            type="checkbox"
+            required
+            name="terms-and-conditions"
+            class="h-4 w-4 text-indigo-600 focus:ring-indigo-500"
+          />
+          <label class="ml-2 text-sm">
+            I accept the
+            <a
+              href="https://www.freecodecamp.org/news/terms-of-service/"
+              target="_blank"
+              class="text-indigo-400 hover:underline"
+              >terms and conditions</a
+            >
+          </label>
+        </div>
 
-        <button type="submit">Submit</button>
+        <button
+          type="submit"
+          class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-4 rounded-md transition"
+        >
+          Submit
+        </button>
       </form>
     </div>
   </body>
